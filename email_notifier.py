@@ -55,7 +55,7 @@ def loop(total_time=120):
     """
     print("Trying to connect...")
     server = IMAPClient(HOSTNAME, use_uid = True, ssl = True)
-    server.login(USERNAME,PASSWORD)
+    server.login(USERNAME, PASSWORD)
     print("Logging in as " + USERNAME)
     select_info = server.select_folder("Inbox", readonly = True)
 
@@ -66,8 +66,8 @@ def loop(total_time=120):
         messages_filter_1 += server.search(["UNSEEN","FROM",sender])
 
     other_messages = [x for x in other_messages if x not in messages_filter_1]
-    print("Unread messages from filter:" + str(len(messages_filter_1)))
-    print(("Other unread messages:" + str(len(other_messages))))
+    print("Unread messages from filter: " + str(len(messages_filter_1)))
+    print(("Other unread messages: " + str(len(other_messages))))
 
     server.logout()
     print("Logged out")
