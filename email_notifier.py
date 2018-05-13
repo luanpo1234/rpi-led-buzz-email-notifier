@@ -2,7 +2,7 @@ from imapclient import IMAPClient
 import time
 import RPi.GPIO as GPIO
 
-#Set up LEDs
+#Set up LEDs and buzzer
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GREEN_LED = 22
