@@ -6,7 +6,7 @@ import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GREEN_LED = 22
-RED_LED =24
+RED_LED = 24
 BUZZER = 18
 GPIO.setup(GREEN_LED,GPIO.OUT)
 GPIO.setup(RED_LED,GPIO.OUT)
