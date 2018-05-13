@@ -37,7 +37,6 @@ def blink_red(step=.5, total_time=60):
     """
     print("Connection failed.")
     print("Retrying...")
-    counter = 0
     while total_time > 0:
         GPIO.output(RED_LED, True)
         time.sleep(step)
