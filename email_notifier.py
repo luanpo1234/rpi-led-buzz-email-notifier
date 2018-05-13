@@ -74,7 +74,7 @@ def loop(total_time=120):
     print("Logged out")
     
     if messages_filter_1:
-        #Checks if the green light is already on; the buzzer only buzzes when the unread
+        #Check if the green light is already on; the buzzer only buzzes when the unread
         #emails are seen for the first time.
 
         if GPIO.input(GREEN_LED) == 0:
